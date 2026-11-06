@@ -1,0 +1,11 @@
+test_existing_user_is_reported (test_sqli_low.SqliLowRegressionTest.test_existing_user_is_reported) ... ok
+test_quote_in_input_is_treated_as_data (test_sqli_low.SqliLowRegressionTest.test_quote_in_input_is_treated_as_data) ... ok
+test_tautology_in_password_does_not_bypass (test_sqli_low.SqliLowRegressionTest.test_tautology_in_password_does_not_bypass) ... ok
+test_tautology_in_username_does_not_bypass (test_sqli_low.SqliLowRegressionTest.test_tautology_in_username_does_not_bypass) ... ok
+test_union_payload_does_not_leak_password_hashes (test_sqli_low.SqliLowRegressionTest.test_union_payload_does_not_leak_password_hashes) ... ok
+test_unknown_user_returns_no_row (test_sqli_low.SqliLowRegressionTest.test_unknown_user_returns_no_row) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.008s
+
+OK

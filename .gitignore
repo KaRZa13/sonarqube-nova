@@ -1,0 +1,31 @@
+# Secrets (POSTGRES_PASSWORD, tokens Sonar)
+.env
+.env.*
+!.env.example
+
+# Application analysée : dépôt git autonome, versionné séparément
+TIWAP/
+
+# Artefacts SonarQube / scanner
+.scannerwork/
+.sonar/
+.sonarlint/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Docker
+docker-compose.override.yml
+compose.override.yaml
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store

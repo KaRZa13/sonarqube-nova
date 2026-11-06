@@ -1,0 +1,19 @@
+diff --git a/vulnerabilities/SQLi.py b/vulnerabilities/SQLi.py
+index 6cca8d5..4d240a5 100644
+--- a/vulnerabilities/SQLi.py
++++ b/vulnerabilities/SQLi.py
+@@ -19,10 +19,11 @@ def sqli_low(username, password):
+         return "User Exists"
+ 
+     try:
+-        stmt = "SELECT userid, username FROM users WHERE username='%s' AND password='%s'" \
+-               % (str(username), str(password))
++        # Requête paramétrée : la structure SQL est fixe, les valeurs sont
++        # transmises séparément au pilote sqlite3 (marqueur « ? »).
++        stmt = "SELECT userid, username FROM users WHERE username = ? AND password = ?"
+ 
+-        result = cur.execute(stmt)
++        result = cur.execute(stmt, (str(username), str(password)))
+ 
+     except sqlite3.OperationalError as e:
+         return e

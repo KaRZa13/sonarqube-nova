@@ -1,0 +1,80 @@
+test_existing_user_is_reported (test_sqli_low.SqliLowRegressionTest.test_existing_user_is_reported) ... ok
+test_quote_in_input_is_treated_as_data (test_sqli_low.SqliLowRegressionTest.test_quote_in_input_is_treated_as_data) ... FAIL
+test_tautology_in_password_does_not_bypass (test_sqli_low.SqliLowRegressionTest.test_tautology_in_password_does_not_bypass) ... FAIL
+test_tautology_in_username_does_not_bypass (test_sqli_low.SqliLowRegressionTest.test_tautology_in_username_does_not_bypass) ... FAIL
+test_union_payload_does_not_leak_password_hashes (test_sqli_low.SqliLowRegressionTest.test_union_payload_does_not_leak_password_hashes) ... FAIL
+test_unknown_user_returns_no_row (test_sqli_low.SqliLowRegressionTest.test_unknown_user_returns_no_row) ... ok
+
+======================================================================
+FAIL: test_quote_in_input_is_treated_as_data (test_sqli_low.SqliLowRegressionTest.test_quote_in_input_is_treated_as_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/karza/dev/tp-sonarqube-nova/TIWAP/tests/test_sqli_low.py", line 77, in test_quote_in_input_is_treated_as_data
+    self.assertNotIsInstance(result, Exception)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: OperationalError('near "brien": syntax error') is an instance of <class 'Exception'>
+
+======================================================================
+FAIL: test_tautology_in_password_does_not_bypass (test_sqli_low.SqliLowRegressionTest.test_tautology_in_password_does_not_bypass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/karza/dev/tp-sonarqube-nova/TIWAP/tests/test_sqli_low.py", line 65, in test_tautology_in_password_does_not_bypass
+    self.assertEqual(result, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: Lists differ: [(1, 'admin'), (2, 'johndoe'), (3, 'chavaA[34 chars]or')] != []
+
+First list contains 5 additional elements.
+First extra element 0:
+(1, 'admin')
+
++ []
+- [(1, 'admin'),
+-  (2, 'johndoe'),
+-  (3, 'chavaAlice'),
+-  (4, 'JenAlex'),
+-  (5, 'pconnor')]
+
+======================================================================
+FAIL: test_tautology_in_username_does_not_bypass (test_sqli_low.SqliLowRegressionTest.test_tautology_in_username_does_not_bypass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/karza/dev/tp-sonarqube-nova/TIWAP/tests/test_sqli_low.py", line 60, in test_tautology_in_username_does_not_bypass
+    self.assertEqual(result, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: Lists differ: [(1, 'admin'), (2, 'johndoe'), (3, 'chavaA[34 chars]or')] != []
+
+First list contains 5 additional elements.
+First extra element 0:
+(1, 'admin')
+
++ []
+- [(1, 'admin'),
+-  (2, 'johndoe'),
+-  (3, 'chavaAlice'),
+-  (4, 'JenAlex'),
+-  (5, 'pconnor')]
+
+======================================================================
+FAIL: test_union_payload_does_not_leak_password_hashes (test_sqli_low.SqliLowRegressionTest.test_union_payload_does_not_leak_password_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/karza/dev/tp-sonarqube-nova/TIWAP/tests/test_sqli_low.py", line 71, in test_union_payload_does_not_leak_password_hashes
+    self.assertEqual(result, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: Lists differ: [('JenAlex', None), ('admin', '21232f297a5[79 chars]one)] != []
+
+First list contains 5 additional elements.
+First extra element 0:
+('JenAlex', None)
+
++ []
+- [('JenAlex', None),
+-  ('admin', '21232f297a57a5a743894a0e4a801fc3'),
+-  ('chavaAlice', None),
+-  ('johndoe', None),
+-  ('pconnor', None)]
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.011s
+
+FAILED (failures=4)
