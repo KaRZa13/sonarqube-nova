@@ -1,0 +1,52 @@
+identifiant,type,regle,gravite,statut,fichier,ligne,message
+29dc4eeb-8a17-4b34-b29d-5a6de56ff13c,VULNERABILITY,python:S4502,CRITICAL,OPEN,app.py,28,Make sure disabling CSRF protection is safe here.
+531d72c9-02ed-440d-9561-3375c9e48d4b,VULNERABILITY,python:S6779,BLOCKER,OPEN,app.py,29,"Don't disclose ""Flask"" secret keys."
+5cf3b6f9-dcca-400c-aca4-8a5384c7e2b9,VULNERABILITY,python:S5247,MAJOR,OPEN,app.py,40,Make sure disabling auto-escaping feature is safe here.
+23efd796-2724-4695-9f0e-6a75b14cc69f,VULNERABILITY,python:S4830,CRITICAL,OPEN,app.py,723,Enable server certificate validation on this SSL/TLS connection.
+08ffec24-2324-4800-8970-ed5ecc498cf6,VULNERABILITY,python:S4830,CRITICAL,OPEN,app.py,728,Enable server certificate validation on this SSL/TLS connection.
+f455f19e-f6db-4f43-80f5-925c700238a0,VULNERABILITY,python:S4830,CRITICAL,OPEN,app.py,731,Enable server certificate validation on this SSL/TLS connection.
+c1f27c76-84d4-4dda-80d4-0f0042eeb8e6,VULNERABILITY,python:S2245,MAJOR,OPEN,app.py,760,Make sure that using this pseudorandom number generator is safe here.
+839d4545-3878-410f-b9cd-e522908fb276,VULNERABILITY,python:S3330,MINOR,OPEN,app.py,848,"Make sure creating this cookie without the ""HttpOnly"" flag is safe."
+4b3a1050-8c89-46e4-8177-8199f24bee91,VULNERABILITY,python:S2092,MINOR,OPEN,app.py,848,"Make sure creating this cookie without the ""secure"" flag is safe."
+37689424-b631-4a82-8cd5-13d9d765673c,VULNERABILITY,python:S2092,MINOR,OPEN,app.py,880,"Make sure creating this cookie without the ""secure"" flag is safe."
+52593eb7-3e17-4b31-b1f7-67495a3fbc41,VULNERABILITY,python:S3330,MINOR,OPEN,app.py,880,"Make sure creating this cookie without the ""HttpOnly"" flag is safe."
+f81a9877-9577-4ef5-b0d2-d0a60d95b10f,VULNERABILITY,python:S2092,MINOR,OPEN,app.py,898,"Make sure creating this cookie without the ""secure"" flag is safe."
+c6e42463-5187-49b6-b09d-5f7619b3e83d,VULNERABILITY,python:S3330,MINOR,OPEN,app.py,898,"Make sure creating this cookie without the ""HttpOnly"" flag is safe."
+bba39caa-1abf-4435-a17d-319c836f7422,VULNERABILITY,python:S4507,MINOR,OPEN,app.py,913,Make sure this debug feature is deactivated before delivering the code in production.
+5c9664c3-96cd-42ad-a2e4-f2eeedb9cc66,VULNERABILITY,python:S8392,BLOCKER,OPEN,app.py,913,Avoid binding the application to all network interfaces.
+e8b60a6a-09eb-4018-af70-453123ef9e62,VULNERABILITY,docker:S6471,MINOR,OPEN,Dockerfile,1,"The ""python"" image runs with ""root"" as the default user. Make sure it is safe here."
+afd1535a-e57d-4be9-9b3e-fc7e2af39244,VULNERABILITY,docker:S6470,CRITICAL,OPEN,Dockerfile,4,Copying recursively might inadvertently add sensitive data to the container. Make sure it is safe here.
+3e7beff9-a70a-4fbe-a327-0d5e07587907,VULNERABILITY,python:S5659,CRITICAL,OPEN,helper/auth.py,39,Don't use a JWT token without verifying its signature.
+2968ab26-94fd-4f95-ad50-08630d932579,VULNERABILITY,python:S4790,CRITICAL,OPEN,helper/db_manager.py,47,Make sure that hashing data is safe here.
+695c5b09-bb49-4603-9366-c87de8bc2f38,VULNERABILITY,python:S4790,CRITICAL,OPEN,helper/db_manager.py,55,Make sure that hashing data is safe here.
+18bbed96-90d0-4df4-a6b9-58746f1260d3,VULNERABILITY,python:S4790,CRITICAL,OPEN,helper/mongodb_manager.py,45,Make sure that hashing data is safe here.
+4237482f-1c98-4547-8b7d-0dace787b2cc,VULNERABILITY,python:S2068,MAJOR,OPEN,helper/mongodb_manager.py,68,"""password"" detected here, review this potentially hard-coded credential."
+87b48207-d837-4b24-b5be-978209191fd0,VULNERABILITY,python:S2068,MAJOR,OPEN,helper/mongodb_manager.py,69,"""password"" detected here, review this potentially hard-coded credential."
+bdd05568-23d1-4e8a-bd69-b8bca357e4f0,VULNERABILITY,javascript:S2068,MAJOR,OPEN,init-db.js,8,Review this potentially hard-coded password.
+375459e6-303f-4e6d-a363-82858774af9a,VULNERABILITY,javascript:S2068,MAJOR,OPEN,init-db.js,12,Review this potentially hard-coded password.
+63db1ed8-9196-4bce-a0ab-3a084ba3fb24,VULNERABILITY,Web:S5725,MINOR,OPEN,templates/dashboard_layout.html,19,"Add integrity and crossorigin=""anonymous"" attributes to this element to enforce integrity checks."
+71a03f69-828a-4589-97ca-cb486052ccba,VULNERABILITY,Web:S5725,MINOR,OPEN,templates/dashboard_layout.html,20,"Add integrity and crossorigin=""anonymous"" attributes to this element to enforce integrity checks."
+ea71dfcf-3f6d-4364-ae87-c0e1bd07fac7,VULNERABILITY,Web:S5725,MINOR,OPEN,templates/dashboard_layout.html,21,"Add integrity and crossorigin=""anonymous"" attributes to this element to enforce integrity checks."
+aea83b12-a0f0-43eb-9c77-18c3b687a175,VULNERABILITY,Web:S5725,MINOR,OPEN,templates/vulnerabilities/xml-external-entities.html,24,"Add integrity and crossorigin=""anonymous"" attributes to this element to enforce integrity checks."
+f43b8ade-983d-4fe4-a6aa-7dff2045d290,VULNERABILITY,python:S4790,CRITICAL,OPEN,vulnerabilities/SQLi.py,152,Make sure that hashing data is safe here.
+09aa410b-ab26-4b09-9f64-ee98dcaa73c0,BUG,python:S1656,MAJOR,OPEN,helper/mongodb_manager.py,20,Remove or correct this useless self-assignment.
+4cb40895-dc23-4b6c-81ff-f78b3526efee,BUG,python:S1656,MAJOR,OPEN,helper/mongodb_manager.py,40,Remove or correct this useless self-assignment.
+0666433e-c1d5-49ba-b2f0-e05862c24ee2,BUG,Web:S5256,MAJOR,OPEN,templates/settings.html,15,"Add ""<th>"" headers to this ""<table>""."
+df5d54c3-8b24-4a44-b0fd-9888102a0470,BUG,Web:InputWithoutLabelCheck,MAJOR,OPEN,templates/vulnerabilities/insecure-file-upload.html,11,Associate a valid label to this input field.
+d4521d02-c265-4d48-93be-27e13646688c,BUG,Web:InputWithoutLabelCheck,MAJOR,OPEN,templates/vulnerabilities/ssrf.html,18,Associate a valid label to this input field.
+3d0f3840-0163-466c-90b9-5371ad5c29a9,CODE_SMELL,python:S6903,CRITICAL,OPEN,helper/auth.py,12,Don't use `datetime.datetime.utcnow` to create this datetime object.
+97166f20-a5d7-4789-ae52-557238cb82fc,CODE_SMELL,python:S6903,CRITICAL,OPEN,helper/auth.py,13,Don't use `datetime.datetime.utcnow` to create this datetime object.
+dab9b47c-d444-46df-ba25-c1c5fc8dca91,CODE_SMELL,python:S6903,CRITICAL,OPEN,helper/auth.py,29,Don't use `datetime.datetime.utcnow` to create this datetime object.
+63ccf847-3f31-42d7-8be8-ecbd5ab6e25f,CODE_SMELL,python:S6903,CRITICAL,OPEN,helper/auth.py,30,Don't use `datetime.datetime.utcnow` to create this datetime object.
+8c765168-b714-4edf-b3fa-c7c41cb2cb3c,CODE_SMELL,python:S6903,CRITICAL,OPEN,helper/auth.py,48,Don't use `datetime.datetime.utcnow` to create this datetime object.
+293c9312-975c-4ac6-93e0-a87bbc1b6934,CODE_SMELL,python:S6903,CRITICAL,OPEN,helper/auth.py,49,Don't use `datetime.datetime.utcnow` to create this datetime object.
+396ebfae-bd34-4839-8f2b-fad6283700cd,CODE_SMELL,Web:S6853,MAJOR,OPEN,templates/settings.html,70,A form label must be associated with a control and have accessible text.
+5020f1e6-7193-4a5b-baee-c585fb9eb803,CODE_SMELL,Web:S6853,MAJOR,OPEN,templates/vulnerabilities/blind-sql-injection.html,31,A form label must be associated with a control and have accessible text.
+f3ca0f35-38cf-4c4d-b2b5-303e77d9b31b,CODE_SMELL,Web:S6853,MAJOR,OPEN,templates/vulnerabilities/csrf.html,23,A form label must be associated with a control and have accessible text.
+a5ed4fef-d0d5-479c-911f-56277f67e33c,CODE_SMELL,Web:S6853,MAJOR,OPEN,templates/vulnerabilities/directory-traversal.html,13,A form label must be associated with a control and have accessible text.
+4a849596-07db-48f5-b753-8364730e5354,CODE_SMELL,Web:S6853,MAJOR,OPEN,templates/vulnerabilities/dom-xss.html,13,A form label must be associated with a control and have accessible text.
+20389f6a-579d-4f14-b1cf-e104ebea0de7,CODE_SMELL,Web:S6853,MAJOR,OPEN,templates/vulnerabilities/html-injection.html,13,A form label must be associated with a control and have accessible text.
+7220ee95-825f-4f6d-b604-f9de09e51e67,CODE_SMELL,Web:S6853,MAJOR,OPEN,templates/vulnerabilities/sensitive-data-exposure-medium.html,13,A form label must be associated with a control and have accessible text.
+0268358e-bd99-471d-b553-083232f2180f,CODE_SMELL,Web:S6853,MAJOR,OPEN,templates/vulnerabilities/sql-injection.html,31,A form label must be associated with a control and have accessible text.
+5a13e84d-8a7d-4127-9d92-b2b0ea8c8ebc,CODE_SMELL,Web:S6853,MAJOR,OPEN,templates/vulnerabilities/stored-html-injection.html,13,A form label must be associated with a control and have accessible text.
+4f0c4c2f-512b-44b9-b47d-2bdd75cc2c3a,CODE_SMELL,Web:S6850,MAJOR,OPEN,templates/vulnerabilities/xml-external-entities.html,20,Headings must have content and the content must be accessible by a screen reader.
